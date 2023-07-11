@@ -1,0 +1,28 @@
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Rototo, Emoji, Helvetica,
+    Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+[disabled],
+[disabled]:hover {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  cursor: no-drop !important;
+}

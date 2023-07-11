@@ -1,0 +1,21 @@
+{
+  "name": "unpwd",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "@types/argon2-browser": "^1.18.1",
+    "svelte": "^4.0.3",
+    "vite": "^4.4.0",
+    "vite-plugin-css-injected-by-js": "^3.2.0"
+  },
+  "dependencies": {
+    "argon2-browser": "^1.18.0"
+  }
+}
