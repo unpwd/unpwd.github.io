@@ -1,7 +1,9 @@
 <script>
-  import Logo from './lib/Logo.svelte'
-  import Main from './lib/main.svelte'
+  import Header from './layouts/header.svelte'
+  import Main from './layouts/main.svelte'
+  import Readme from './layouts/readme.svelte'
 </script>
 
-<Logo />
+<Header />
 <Main />
+<Readme />

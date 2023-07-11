@@ -1,7 +1,7 @@
 <script>
   import argon2 from 'argon2-browser/dist/argon2-bundled.min.js'
-  import Open from './svg/preview-open.svelte'
-  import Close from './svg/preview-close.svelte'
+  import Open from '../svg/preview-open.svelte'
+  import Close from '../svg/preview-close.svelte'
   const SALT = 'Unified_Password'
   const hashLen = 12
   const _desensitize = '*'.repeat(hashLen * 2)
@@ -67,7 +67,8 @@
   }
 </script>
 
-<div class="main-container">
+<main>
+  <h1>Unified Password</h1>
   <div class="container-item password-wrap">
     <input
       required
@@ -110,25 +111,30 @@
   <button class="copy" on:click={onCopy} disabled={!(pwd && alias)}
     >{isCopy ? 'COPIED' : 'COPY'}</button
   >
-</div>
+</main>
 
 <style>
-  .main-container {
+  main {
     display: flex;
-    margin-top: 20px;
+    margin: 0 auto;
     flex-direction: column;
     align-items: center;
     max-width: 400px;
-    min-width: 300px;
+  }
+
+  h1 {
+    color: var(--color, #393e46);
   }
 
   input {
+    color: var(--color);
     width: 100%;
     outline: none;
     font-size: 18px;
     border: none;
     padding-bottom: 4px;
     border-bottom: 2px solid #bfbfbf;
+    background: transparent;
     transition: 0.2s ease;
   }
 
@@ -142,7 +148,7 @@
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
+    height: 2.5px;
     top: 25px;
     left: 0;
     background-color: #0087ca;
@@ -166,7 +172,7 @@
   .container-item input:focus ~ label {
     transform: translateY(-24px);
     font-size: 14px;
-    opacity: .4;
+    opacity: 0.4;
   }
 
   .new-password {
@@ -184,6 +190,7 @@
   }
 
   .show-password {
+    color: var(--color);
     display: flex;
     border: none;
     cursor: pointer;
