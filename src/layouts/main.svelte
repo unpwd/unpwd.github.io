@@ -93,6 +93,7 @@
     <span class="bar" />
     <label for="alias">Platform Alias</label>
   </div>
+  <div class="container-item new-pwd-placeholder">Your Unified Password</div>
   <div class="container-item new-password">
     <span class="password">{isShow ? hash : desensitize}</span>
     <button
@@ -133,7 +134,7 @@
     font-size: 18px;
     border: none;
     padding-bottom: 4px;
-    border-bottom: 2px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
     background: transparent;
     transition: 0.2s ease;
   }
@@ -175,11 +176,16 @@
     opacity: 0.4;
   }
 
+  .new-pwd-placeholder {
+    text-align: center;
+    opacity: 0.6;
+    font-weight: bold;
+  }
+
   .new-password {
     display: flex;
     margin-top: 30px;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
   }
 
   .new-password .password {
@@ -192,6 +198,8 @@
   .show-password {
     color: var(--color);
     display: flex;
+    position: absolute;
+    right: 50px;
     border: none;
     cursor: pointer;
     padding: 0 6px;
@@ -205,9 +213,7 @@
 
   .copy {
     font-size: 20px;
-    width: 100%;
     color: #fff;
-    border-color: #f0db4f;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -217,10 +223,10 @@
     cursor: pointer;
     text-align: center;
     font-weight: 600;
-    margin-top: 20px;
-    padding: 6px 0;
-    border: 1px solid #dcdfe6;
-    background: #f0db4f;
+    margin-top: 30px;
+    padding: 10px 40px;
+    border: 1px solid #4cc2ff;
+    background: #4cc2ff;
     transition: 0.1s;
     border-radius: 4px;
     white-space: nowrap;
@@ -228,5 +234,6 @@
   }
   .copy:hover {
     opacity: 1;
+    box-shadow: 0 0 20px 0 #4cc2ff;
   }
 </style>

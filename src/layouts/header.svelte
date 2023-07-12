@@ -34,7 +34,7 @@
       title="UnPwd on Github"
       href="https://github.com/unpwd"
       target="_blank"
-      rel="nofollow noreferrer noopener">Github</a
+      rel="nofollow noreferrer noopener">GitHub</a
     >
   </div>
 </header>
