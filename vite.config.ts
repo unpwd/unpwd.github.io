@@ -4,7 +4,14 @@ import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  build: { assetsDir: '.' },
+  build: {
+    assetsDir: '.',
+    rollupOptions: {
+      output: {
+        entryFileNames: '[name].js'
+      }
+    }
+  },
   plugins: [
     svelte(),
     cssInjectedByJsPlugin({
